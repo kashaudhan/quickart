@@ -17,7 +17,15 @@ Follow the steps to run the application:
     ```
     source .venv/bin/activate
     ```
-3. Run migrations
+    
+3. install dependencies
+   
+    ```
+    pip install -r requirements.txt
+    ```
+
+
+4. Run migrations
   
     ```
     python manage.py makemigrations
@@ -26,11 +34,11 @@ Follow the steps to run the application:
     ```
     python manage.py migrate
     ```
-4. Start server
+5. Start server
 
     ```
     python manage.py runserver
     ```
-5. Visit URL
+6. Visit URL
 
     `http://127.0.0.1:8000/`
