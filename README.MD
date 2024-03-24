@@ -44,7 +44,7 @@ Follow the steps to run the application:
     `http://127.0.0.1:8000/`
 
 
-To run app using docker following the following command
+To run app using docker use the following command
 
 ```
 docker-compose build && docker-compose up
