@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('DJANGO_SECRET_KEY')
+SECRET_KEY = config('DJANGO_SECRET_KEY', default='fojdfjo409fji92458fjw0r340-=-02IJDe')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -155,8 +155,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # SMTP configuration
-EMAIL_HOST = config('EMAIL_HOST') #'smtp.<provider's domain>'  e.g., 'smtp.gmail.com'
-EMAIL_PORT = config('EMAIL_PORT', cast=int) # for gmail: 587
-EMAIL_HOST_USER = config('SENDER_EMAIL_ID')
-EMAIL_HOST_PASSWORD = config('SENDER_EMAIL_PASSWORD')
-EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
+# EMAIL_HOST = config('EMAIL_HOST') #'smtp.<provider's domain>'  e.g., 'smtp.gmail.com'
+# EMAIL_PORT = config('EMAIL_PORT', cast=int) # for gmail: 587
+# EMAIL_HOST_USER = config('SENDER_EMAIL_ID')
+# EMAIL_HOST_PASSWORD = config('SENDER_EMAIL_PASSWORD')
+# EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
