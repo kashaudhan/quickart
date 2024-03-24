@@ -13,7 +13,7 @@ class Product(models.Model):
     images = models.ImageField(upload_to='photos/products')
     stock = models.IntegerField()
     is_available = models.BooleanField(default=True)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
     created_date = models.DateTimeField(auto_now_add=True)
     modified_date = models.DateTimeField(auto_now=True)
 
@@ -88,5 +88,5 @@ class ProductGallery(models.Model):
 
 
     class Meta:
-        verbose_name = 'product-gallery'
+        verbose_name = 'productgallery'
         verbose_name_plural = 'Product Gallery'
