@@ -70,6 +70,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'category.context_processors.menu_links',
+                'cart.context_processors.counter',
             ],
         },
     },
@@ -150,3 +152,11 @@ MEDIA_ROOT = BASE_DIR /'media'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# SMTP configuration
+EMAIL_HOST = config('EMAIL_HOST') #'smtp.<provider's domain>'  e.g., 'smtp.gmail.com'
+EMAIL_PORT = config('EMAIL_PORT', cast=int) # for gmail: 587
+EMAIL_HOST_USER = config('SENDER_EMAIL_ID')
+EMAIL_HOST_PASSWORD = config('SENDER_EMAIL_PASSWORD')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
